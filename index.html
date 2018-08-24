@@ -42,6 +42,7 @@
       <li>Client, server, mobile, <a href="http://jerryscript.net/">IoT</a>, <a href="http://johnny-five.io/">robots...</a></li>
       <li>Write it in any style</li>
       <li>Large ecosystem</li>
+      <li>Concise</li>
       <notes>
         Object-oriented or functional
         Declarative or imperative
@@ -65,8 +66,7 @@
       <ul>
         <li>Loosely typed</li>
         <li>Automatic semicolon insertion</li>
-        <li>API support varies across browsers</li>
-        <li>The DOM is basially a giant global</li>
+        <li>The DOM is basially a giant global variable</li>
         <li>Traditional navigation = full page reload</li>
       </ul>
   </div>
@@ -113,7 +113,7 @@
   </div>
   <div>
     <h1>Type Coercion</h1>
-    <a href="https://repl.it/@rdebeasi/JSIsWeird" target="_blank">Demo</a>
+    <a href="https://www.typescriptlang.org/play/#src=function%20isEven(number)%20%7B%0D%0A%20%20return%20(number%20%25%202%20%3D%3D%3D%200)%3B%0D%0A%7D%0D%0Afunction%20say(value)%20%7B%0D%0A%20%20%20%20let%20paragraph%20%3D%20document.createElement('p')%3B%0D%0A%20%20%20%20paragraph.textContent%20%3D%20value%3B%0D%0A%20%20%20%20document.body.appendChild(paragraph)%3B%0D%0A%7D%0D%0A%0D%0Afunction%20sayIsEven(value)%20%7B%0D%0A%20%20%20%20let%20result%20%3D%20isEven(value)%20%3F%20'even'%20%3A%20'odd'%3B%0D%0A%20%20%20%20say(%60The%20%24%7Btypeof%20value%7D%20%24%7Bvalue%7D%20is%20%24%7Bresult%7D%60)%3B%0D%0A%7D%0D%0A%0D%0AsayIsEven(5)%3B%0D%0AsayIsEven(4)%3B%0D%0AsayIsEven(4%20%2B%204)%3B%0D%0AsayIsEven('5')%3B%0D%0AsayIsEven('4')%3B%0D%0AsayIsEven('4%20%2B%204')%3B%0D%0AsayIsEven('Pizza')%3B%0D%0Asay(%60%225%22%20converted%20to%20a%20number%20is%20%24%7BparseInt('5')%7D%60)%3B%0D%0Asay(%60%22Pizza%22%20converted%20to%20a%20number%20is%20%24%7B%20parseInt(%22pizza%22)%7D%60)%3B%0D%0A" target="_blank">Demo</a>
   </div>
   <div>
     <h1>Ok, so now what?</h1>
@@ -135,8 +135,12 @@
       <li>ES6 added classes, arrow functions, etc.</li>
       <li>Linters like ESLint enforce common style</li>
       <li>Unit and E2E tests catch bugs</li>
-      <li>TypeScript provies "type hints"</li>
+      <li>TypeScript provies type annotations and more</li>
     </ul>
+  </div>
+  <div>
+    <h1>Type Annotations</h1>
+    <a href="https://www.typescriptlang.org/play/#src=function%20isEven(number)%20%7B%0D%0A%20%20return%20(number%20%25%202%20%3D%3D%3D%200)%3B%0D%0A%7D%0D%0Afunction%20say(value)%20%7B%0D%0A%20%20%20%20let%20paragraph%20%3D%20document.createElement('p')%3B%0D%0A%20%20%20%20paragraph.textContent%20%3D%20value%3B%0D%0A%20%20%20%20document.body.appendChild(paragraph)%3B%0D%0A%7D%0D%0A%0D%0Afunction%20sayIsEven(value%3A%20number)%20%7B%0D%0A%20%20%20%20let%20result%20%3D%20isEven(value)%20%3F%20'even'%20%3A%20'odd'%3B%0D%0A%20%20%20%20say(%60The%20%24%7Btypeof%20value%7D%20%24%7Bvalue%7D%20is%20%24%7Bresult%7D%60)%3B%0D%0A%7D%0D%0A%0D%0AsayIsEven(5)%3B%0D%0AsayIsEven(4)%3B%0D%0AsayIsEven(4%20%2B%204)%3B%0D%0AsayIsEven('5')%3B%0D%0AsayIsEven('4')%3B%0D%0AsayIsEven('4%20%2B%204')%3B%0D%0AsayIsEven('Pizza')%3B%0D%0Asay(%60%225%22%20converted%20to%20a%20number%20is%20%24%7BparseInt('5')%7D%60)%3B%0D%0Asay(%60%22Pizza%22%20converted%20to%20a%20number%20is%20%24%7B%20parseInt(%22pizza%22)%7D%60)%3B%0D%0A"></a>
   </div>
   <div>
     <h1>Documentation</h1>
@@ -258,17 +262,14 @@ export class HeroService {
       <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">A re-introduction to JavaScript</a></li>
       <li><a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">TypeScript in 5 minutes</a></li>
       <li><a href="https://gist.github.com/sinedied/214d95c496634a01ab6e0f648e24a22f">The missing introduction to Angular</a></li>
+      <li><a href="https://angular.io/docs/ts/latest/tutorial/">Angular Tutorial</a></li>
     </ul>
   </div>
   <div>
     <h1>Questions?</h1>
   </div>
-  <div>
+  <div data-background-image="img/rocket.jpg">
     <h1>Let's get started!</h1>
-    <a href="https://angular.io/docs/ts/latest/tutorial/">Angular Tutorial</a>
-  </div>
-  <div>
-    <h1>Thank you!</h1>
   </div>
 </body>
 </html>
