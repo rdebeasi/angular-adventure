@@ -1,3 +1,8 @@
 .adjust-bg .slide-container {
     background-position-y: 15%;
 }
+
+.spiderman .slide-container {
+    background-size: cover;
+    background-position-x: 20%;
+}
